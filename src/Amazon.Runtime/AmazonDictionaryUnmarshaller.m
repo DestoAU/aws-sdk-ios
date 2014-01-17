@@ -51,8 +51,8 @@
     }
     
     // Found the End of Entry Element for the Dictionary Entry, add current value
-    if ((entryEndElement != nil && [elementName isEqualToString:entryEndElement]) ||
-        [elementName isEqualToString:dictionaryEndElement]) {
+    if (((entryEndElement != nil && [elementName isEqualToString:entryEndElement]) ||
+        [elementName isEqualToString:dictionaryEndElement]) && key != nil) {
         [self.dictionary setValue:self.value forKey:key];
     }
     
